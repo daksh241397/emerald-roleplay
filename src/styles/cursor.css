@@ -1,0 +1,22 @@
+/* Hide cursor in non-editable areas */
+*:not(input):not(textarea):not([contenteditable="true"]) {
+  caret-color: transparent;
+}
+
+/* Ensure input fields and textareas maintain cursor visibility */
+input, textarea, [contenteditable="true"] {
+  caret-color: auto;
+}
+
+/* Preserve cursor visibility in Material-UI components */
+.MuiInputBase-root {
+  caret-color: auto !important;
+}
+
+/* Ensure buttons and interactive elements remain clickable */
+button, 
+[role="button"],
+a,
+.MuiButtonBase-root {
+  pointer-events: auto !important;
+} 
